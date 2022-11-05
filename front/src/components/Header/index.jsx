@@ -29,6 +29,7 @@ const StyledLink = styled(Link)`
     font-weight: 500;
     color: #ff6060;
     cursor: pointer;
+    text-decoration: none;
     list-style: none;
     &:hover {
         text-decoration: underline;

@@ -15,7 +15,6 @@ root.render(
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/lodging" element={<Lodging />} />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
