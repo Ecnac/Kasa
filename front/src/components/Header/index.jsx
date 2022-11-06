@@ -1,6 +1,7 @@
 import logo from '../../assets/logo.png';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import colors from '../../utils/Style/color';
 
 const HeaderContainer = styled.header`
     display: flex;
@@ -27,7 +28,7 @@ const StyledLink = styled(Link)`
     margin: 0 30px;
     font-size: 24px;
     font-weight: 500;
-    color: #ff6060;
+    color: ${colors.primary};
     cursor: pointer;
     text-decoration: none;
     list-style: none;

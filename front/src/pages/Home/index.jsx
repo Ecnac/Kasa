@@ -1,5 +1,6 @@
 import Banner from '../../components/Banner';
 import styled from 'styled-components';
+import colors from '../../utils/Style/color';
 import lodgementsList from '../../data/logements.json';
 import Card from '../../components/Card';
 
@@ -21,8 +22,9 @@ const CardContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin: 100px 0 auto;
+    padding-top: 50px;
     border-radius: 25px;
-    background: #f6f6f6;
+    background: ${colors.background};
 `;
 
 console.log(lodgementsList);

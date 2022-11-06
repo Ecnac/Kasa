@@ -1,16 +1,16 @@
 import styled from 'styled-components';
+import colors from '../../utils/Style/color';
 
 const CardWrapper = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 28%;
-    height: 250px;
-    margin: 3% 1.75% 0;
+    width: 340px;
+    height: 340px;
+    margin: 0 30px 50px;
     border-radius: 10px;
-    background: #ff6060;
+    background: ${colors.primary};
 `;
-
 const Card = ({ title, cover }) => {
     return <CardWrapper></CardWrapper>;
 };
