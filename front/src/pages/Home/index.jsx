@@ -35,7 +35,12 @@ const Home = () => {
             <Banner />
             <CardContainer>
                 {lodgementsList.map((lodgement) => (
-                    <Card />
+                    <Card
+                        key={lodgement.id}
+                        id={lodgement.id}
+                        title={lodgement.title}
+                        cover={lodgement.cover}
+                    />
                 ))}
             </CardContainer>
         </HomeContainer>
