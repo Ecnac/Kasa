@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import GlobalStyle from './utils/Style/GlobalStyle';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Lodging from './pages/Lodging';
@@ -21,6 +22,7 @@ root.render(
                 <Route path="/lodging/:id" element={<Lodging />} />
                 <Route path="*" element={<Error />} />
             </Routes>
+            <Footer />
         </BrowserRouter>
     </React.StrictMode>
 );

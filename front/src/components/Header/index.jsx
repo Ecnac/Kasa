@@ -6,15 +6,24 @@ import colors from '../../utils/Style/color';
 const HeaderContainer = styled.header`
     display: flex;
     align-items: center;
-    height: 68px;
     justify-content: space-between;
-    padding: 40px 100px 0 100px;
+    width: 100%;
+    height: 68px;
+    padding: 40px 0 0 0;
+`;
+
+const LogoContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
 `;
 
 const Nav = styled.nav`
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin-right: 5%;
 `;
 
 const ListWrapper = styled.div`
@@ -25,7 +34,7 @@ const ListWrapper = styled.div`
 `;
 
 const StyledLink = styled(Link)`
-    margin: 0 30px;
+    margin: 0 0 0 57px;
     font-size: 24px;
     font-weight: 500;
     color: ${colors.primary};
@@ -39,9 +48,9 @@ const StyledLink = styled(Link)`
 
 const Header = () => (
     <HeaderContainer>
-        <Link to="/">
-            <img src={logo} alt="logo" />{' '}
-        </Link>
+        <LogoContainer>
+            <img src={logo} alt="logo" />
+        </LogoContainer>
         <Nav>
             <ListWrapper>
                 <StyledLink to="/">Accueil</StyledLink>

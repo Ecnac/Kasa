@@ -1,5 +1,6 @@
-import banner from '../../assets/banner.png';
+import banner from '../../assets/home-banner.png';
 import styled from 'styled-components';
+import colors from '../../utils/Style/color';
 
 const BannerContainer = styled.div`
     width: 100%;
@@ -15,10 +16,19 @@ const BannerImg = styled.img`
     height: auto;
 `;
 
+const BannerText = styled.p`
+    position: absolute;
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0 7.5%;
+    color: ${colors.secondary};
+`;
+
 const Banner = () => {
     return (
         <BannerContainer>
             <BannerImg src={banner} alt="banner" />
+            <BannerText>Chez vous, partout et ailleurs</BannerText>
         </BannerContainer>
     );
 };

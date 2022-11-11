@@ -1,8 +1,8 @@
 import Banner from '../../components/Banner';
 import styled from 'styled-components';
 import colors from '../../utils/Style/color';
-import lodgementsList from '../../data/logements.json';
 import Card from '../../components/Card';
+import { useState, useEffect } from 'react';
 
 const HomeContainer = styled.div`
     width: 100%;
@@ -14,7 +14,7 @@ const HomeContainer = styled.div`
     margin: 0 auto;
 `;
 
-const CardContainer = styled.div`
+const CardContainer = styled.section`
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -27,19 +27,29 @@ const CardContainer = styled.div`
     background: ${colors.background};
 `;
 
-console.log(lodgementsList);
-
 const Home = () => {
+    const [lodgements, setLodgements] = useState([]);
+
+    const fetchLodgements = async () => {
+        const response = await fetch('./data/logements.json');
+        const data = await response.json();
+        setLodgements(data);
+    };
+
+    useEffect(() => {
+        fetchLodgements();
+    }, []);
+
     return (
         <HomeContainer>
             <Banner />
             <CardContainer>
-                {lodgementsList.map((lodgement) => (
+                {lodgements.map((lodgement) => (
                     <Card
                         key={lodgement.id}
-                        id={lodgement.id}
                         title={lodgement.title}
                         cover={lodgement.cover}
+                        id={lodgement.id}
                     />
                 ))}
             </CardContainer>
