@@ -12,15 +12,6 @@ const CardWrapper = styled.article`
     border-radius: 10px;
 `;
 
-const TitleWrapper = styled.div`
-    position: absolute;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-    background-image: ${colors.gradient};
-`;
-
 const CardLink = styled(Link)`
     position: absolute;
     width: 340px;
@@ -36,6 +27,15 @@ const CardImage = styled.img`
     object-fit: cover;
 `;
 
+const TitleWrapper = styled.div`
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-image: ${colors.gradient};
+`;
+
 const CardTitle = styled.p`
     position: relative;
     top: 265px;
@@ -48,7 +48,7 @@ const CardTitle = styled.p`
 const Card = ({ title, cover, id }) => {
     return (
         <CardWrapper>
-            <CardLink to={`/lodging/${id}`}>
+            <CardLink to={`/logement/${id}`}>
                 <CardImage src={cover} alt={title} />
                 <TitleWrapper>
                     <CardTitle>{title}</CardTitle>

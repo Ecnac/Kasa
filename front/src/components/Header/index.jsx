@@ -54,7 +54,7 @@ const Header = () => (
         <Nav>
             <ListWrapper>
                 <StyledLink to="/">Accueil</StyledLink>
-                <StyledLink to="/About">À Propos</StyledLink>
+                <StyledLink to="/a-propos">À Propos</StyledLink>
             </ListWrapper>
         </Nav>
     </HeaderContainer>

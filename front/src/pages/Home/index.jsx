@@ -31,7 +31,7 @@ const Home = () => {
     const [lodgements, setLodgements] = useState([]);
 
     const fetchLodgements = async () => {
-        const response = await fetch('./data/logements.json');
+        const response = await fetch('./logements.json');
         const data = await response.json();
         setLodgements(data);
     };

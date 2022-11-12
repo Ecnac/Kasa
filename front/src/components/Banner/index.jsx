@@ -1,4 +1,5 @@
-import banner from '../../assets/home-banner.png';
+import homeBanner from '../../assets/home-banner.png';
+import aboutBanner from '../../assets/about-banner.png';
 import styled from 'styled-components';
 import colors from '../../utils/Style/color';
 
@@ -25,10 +26,17 @@ const BannerText = styled.p`
 `;
 
 const Banner = () => {
+    // Vérifie le chemin d'accès de la page et affiche la bannière et le texte correspondant
+    const banner = window.location.pathname === '/' ? homeBanner : aboutBanner;
+    const bannerText =
+        window.location.pathname === '/'
+            ? 'Chez vous, partout et ailleurs'
+            : '';
+
     return (
         <BannerContainer>
             <BannerImg src={banner} alt="banner" />
-            <BannerText>Chez vous, partout et ailleurs</BannerText>
+            <BannerText>{bannerText}</BannerText>
         </BannerContainer>
     );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import GlobalStyle from './utils/Style/GlobalStyle';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -18,9 +18,10 @@ root.render(
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/lodging/:id" element={<Lodging />} />
-                <Route path="*" element={<Error />} />
+                <Route path="/a-propos" element={<About />} />
+                <Route path="/logement/:id" element={<Lodging />} />
+                <Route path="/404" element={<Error />} />
+                <Route path="*" element={<Navigate to="/404" />} />
             </Routes>
             <Footer />
         </BrowserRouter>
