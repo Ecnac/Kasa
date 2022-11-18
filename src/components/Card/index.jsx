@@ -10,6 +10,10 @@ const CardWrapper = styled.article`
     height: 340px;
     margin: 0 30px 50px;
     border-radius: 10px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        margin: 0 0 25px;
 `;
 
 const CardLink = styled(Link)`
@@ -18,6 +22,9 @@ const CardLink = styled(Link)`
     height: 340px;
     border-radius: 10px;
     text-decoration: none;
+
+    @media (max-width: 768px) {
+        width: 90%;
 `;
 
 const CardImage = styled.img`
@@ -42,6 +49,7 @@ const CardTitle = styled.p`
     font-size: 18px;
     weight: 500;
     left: 10px;
+    margin-right: 5%;
     color: ${colors.secondary};
 `;
 

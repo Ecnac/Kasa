@@ -17,7 +17,10 @@ const FooterText = styled.p`
     font-size: 24px;
     font-weight: 500;
     color: ${colors.secondary};
-`;
+    
+    @media (max-width: 768px) {
+        font-size: 12px;
+    `;
 
 const Footer = () => {
     return (

@@ -29,13 +29,28 @@ const AboutContainer = styled.div`
     padding-top: 40px;
 `;
 
+const CollapseContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        width: 90%;
+`;
 const About = () => {
     return (
         <AboutContainer>
             <Banner />
-            {AboutContent.map(({ title, content }) => (
-                <Collapse label={title}>{content}</Collapse>
-            ))}
+            <CollapseContainer>
+                {AboutContent.map(({ title, content }) => (
+                    <Collapse key={title} label={title}>
+                        {content}
+                    </Collapse>
+                ))}
+            </CollapseContainer>
         </AboutContainer>
     );
 };

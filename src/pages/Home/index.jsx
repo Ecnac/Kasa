@@ -25,19 +25,19 @@ const CardContainer = styled.section`
     padding-top: 50px;
     border-radius: 25px;
     background: ${colors.background};
+
+    @media (max-width: 768px) {
+        background: none;
+        margin: 0 auto;
 `;
 
 const Home = () => {
     const [lodgements, setLodgements] = useState([]);
 
-    const fetchLodgements = async () => {
-        const response = await fetch('./logements.json');
-        const data = await response.json();
-        setLodgements(data);
-    };
-
     useEffect(() => {
-        fetchLodgements();
+        fetch('./logements.json')
+            .then((response) => response.json())
+            .then((data) => setLodgements(data));
     }, []);
 
     return (
