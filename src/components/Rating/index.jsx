@@ -33,9 +33,9 @@ const Rating = ({ rating }) => {
         <StarsContainer>
             {stars.map((star) => {
                 if (star <= rating) {
-                    return <Star src={redStar} alt="red star" />;
+                    return <Star key={star} src={redStar} alt="red star" />;
                 }
-                return <Star src={greyStar} alt="grey star" />;
+                return <Star key={star} src={greyStar} alt="grey star" />;
             })}
         </StarsContainer>
     );

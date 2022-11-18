@@ -133,16 +133,13 @@ const Lodging = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const fetchLodgement = async () => {
-            const response = await fetch('/logements.json');
-            const data = await response.json();
-
-            // Vérifie si l'id du logement existe
-            const lodgement = data.find((lodgement) => lodgement.id === id);
-            setLodgement(lodgement);
-            setIsLoaded(true);
-        };
-        fetchLodgement();
+        fetch(`/logements.json`)
+            .then((response) => response.json())
+            .then((data) => {
+                const lodgement = data.find((lodgement) => lodgement.id === id);
+                setLodgement(lodgement);
+                setIsLoaded(true);
+            });
     }, [id]);
 
     // Si l'id du logement ne correspond pas, on redirige vers la page d'erreur
@@ -177,10 +174,7 @@ const Lodging = () => {
                         </ImageContainer>
                     </HostInfos>
                     <RatingContainer>
-                        <Rating
-                            key={lodgement.rating}
-                            rating={lodgement.rating}
-                        />
+                        <Rating rating={lodgement.rating} />
                     </RatingContainer>
                 </HostAndRating>
             </HeadInfos>
