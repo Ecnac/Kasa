@@ -68,7 +68,6 @@ const Collapse = (props) => {
             >
                 {props.label}
                 <img
-                    id="arrow"
                     src={arrow}
                     alt="arrow"
                     style={{

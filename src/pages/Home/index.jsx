@@ -14,7 +14,7 @@ const HomeContainer = styled.div`
     margin: 0 auto;
 `;
 
-const CardContainer = styled.section`
+const CardContainer = styled.div`
     width: 90%;
     display: flex;
     flex-direction: row;

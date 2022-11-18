@@ -70,7 +70,6 @@ const StyledLink = styled(Link)`
 
     @media (max-width: 768px) {
         font-size: 12px;
-        word-wrap: no-wrap;
         margin: 0 0 0 20px;
 `;
 

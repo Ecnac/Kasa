@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import colors from '../../utils/Style/color';
 
-const CardWrapper = styled.article`
+const CardWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +47,7 @@ const CardTitle = styled.p`
     position: relative;
     top: 265px;
     font-size: 18px;
-    weight: 500;
+    font-weight: 500;
     left: 10px;
     margin-right: 5%;
     color: ${colors.secondary};
