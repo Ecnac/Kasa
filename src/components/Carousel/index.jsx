@@ -20,6 +20,10 @@ const CarouselImage = styled.img`
     height: 415px;
     border-radius: 25px;
     object-fit: cover;
+
+    @media (max-width: 768px) {
+        height: 255px;
+
 `;
 
 const LeftButton = styled.button`
@@ -29,6 +33,9 @@ const LeftButton = styled.button`
     border: none;
     cursor: pointer;
     background-color: transparent;
+
+    @media (max-width: 768px) {
+        left: 1%;
 `;
 
 const RightButton = styled.button`
@@ -38,18 +45,29 @@ const RightButton = styled.button`
     border: none;
     cursor: pointer;
     background-color: transparent;
+
+    @media (max-width: 768px) {
+        right: 1%;
 `;
 
 const PreviousArrow = styled.img`
     width: 100%;
     height: 100%;
     object-fit: contain;
+
+    @media (max-width: 768px) {
+        width: 50%;
+        height: 50%;
 `;
 
 const NextArrow = styled.img`
     width: 100%;
     height: 100%;
     object-fit: contain;
+
+    @media (max-width: 768px) {
+        width: 50%;
+        height: 50%;
 `;
 
 const SlideNumber = styled.p`

@@ -17,7 +17,7 @@ const ToggleButton = styled.button`
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    height: 47px;
+    height: 52px;
     margin-top: 40px;
     padding-left: 10px;
     border: none;
@@ -30,8 +30,19 @@ const ToggleButton = styled.button`
 
     @media (max-width: 768px) {
         width: 100%;
+        height: 30px;
         font-size: 13px;
         margin-top: 20px;
+`;
+
+const Arrow = styled.img`
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+
+    @media (max-width: 768px) {
+        width: 18px;
+        height: 18px;
 `;
 
 const TextContainer = styled.div`
@@ -67,7 +78,7 @@ const Collapse = (props) => {
                 ]}
             >
                 {props.label}
-                <img
+                <Arrow
                     src={arrow}
                     alt="arrow"
                     style={{

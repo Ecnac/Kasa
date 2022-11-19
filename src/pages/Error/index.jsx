@@ -13,18 +13,29 @@ const ErrorTitle = styled.h1`
     font-size: 288px;
     margin: 80px 0 0;
     color: ${colors.primary};
+
+    @media (max-width: 768px) {
+        font-size: 96px;
 `;
 
 const ErrorSubtitle = styled.h2`
+    text-align: center; 
+    width: 100%;
     font-size: 36px;
     font-weight: 500;
     color: ${colors.primary};
+
+    @media (max-width: 768px) {
+        font-size: 18px;
 `;
 
 const ErrorLink = styled(Link)`
     color: ${colors.primary};
     font-size: 18px;
     margin-top: 120px;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
 `;
 
 const Error = () => {
