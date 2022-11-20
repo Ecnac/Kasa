@@ -101,7 +101,14 @@ const Carousel = ({ images }) => {
         setCurrentImage(currentImage === 0 ? length - 1 : currentImage - 1);
     };
 
-    return (
+    return length === 1 ? (
+        <CarouselContainer>
+            <CarouselImage src={images[currentImage]} alt="carousel" />
+            <SlideNumber>
+                {currentImage + 1}/{length}
+            </SlideNumber>
+        </CarouselContainer>
+    ) : (
         <CarouselContainer>
             <LeftButton onClick={prevImage}>
                 <PreviousArrow src={leftArrow} alt="left-arrow" />
