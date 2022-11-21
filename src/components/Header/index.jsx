@@ -10,6 +10,9 @@ const HeaderContainer = styled.header`
     width: 100%;
     height: 68px;
     padding: 40px 0 0 0;
+
+    @media (max-width: 768px) {
+        padding: 20px 0 0 0;
 `;
 
 const LogoContainer = styled.div`
@@ -54,6 +57,9 @@ const ListWrapper = styled.ul`
 
 const ListItem = styled.li`
     list-style: none;
+
+    @media (max-width: 768px) {
+        text-transform: uppercase;
 `;
 
 const StyledLink = styled(Link)`
@@ -70,7 +76,7 @@ const StyledLink = styled(Link)`
 
     @media (max-width: 768px) {
         font-size: 12px;
-        margin: 0 0 0 20px;
+        margin: 0 0 0 10px;
 `;
 
 const Header = () => (

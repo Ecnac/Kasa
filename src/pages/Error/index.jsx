@@ -11,11 +11,12 @@ const ErrorContainer = styled.div`
 
 const ErrorTitle = styled.h1`
     font-size: 288px;
-    margin: 80px 0 0;
+    margin: 169px 0 0;
     color: ${colors.primary};
 
     @media (max-width: 768px) {
         font-size: 96px;
+        margin: 185px 0 0;
 `;
 
 const ErrorSubtitle = styled.h2`

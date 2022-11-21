@@ -35,7 +35,8 @@ const LeftButton = styled.button`
     background-color: transparent;
 
     @media (max-width: 768px) {
-        left: 1%;
+        left: 0;
+        top: 50%
 `;
 
 const RightButton = styled.button`
@@ -47,7 +48,8 @@ const RightButton = styled.button`
     background-color: transparent;
 
     @media (max-width: 768px) {
-        right: 1%;
+        right: 0;
+        top: 50%;
 `;
 
 const PreviousArrow = styled.img`
@@ -56,8 +58,8 @@ const PreviousArrow = styled.img`
     object-fit: contain;
 
     @media (max-width: 768px) {
-        width: 50%;
-        height: 50%;
+        width: 25%;
+        height: 25%;
 `;
 
 const NextArrow = styled.img`
@@ -66,8 +68,8 @@ const NextArrow = styled.img`
     object-fit: contain;
 
     @media (max-width: 768px) {
-        width: 50%;
-        height: 50%;
+        width: 25%;
+        height: 25%;
 `;
 
 const SlideNumber = styled.p`

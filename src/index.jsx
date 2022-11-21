@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Navigate,
+} from 'react-router-dom';
 import GlobalStyle from './utils/Style/GlobalStyle';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -13,7 +18,7 @@ import Error from './pages/Error';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
+        <Router>
             <GlobalStyle />
             <Header />
             <Routes>
@@ -24,7 +29,7 @@ root.render(
                 <Route path="*" element={<Navigate to="/404" />} />
             </Routes>
             <Footer />
-        </BrowserRouter>
+        </Router>
     </React.StrictMode>
 );
 

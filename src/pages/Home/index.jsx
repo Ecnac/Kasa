@@ -12,6 +12,9 @@ const HomeContainer = styled.div`
     align-items: center;
     padding-top: 40px;
     margin: 0 auto;
+
+    @media (max-width: 768px) {
+        padding-top: 16px;
 `;
 
 const CardContainer = styled.div`
@@ -29,6 +32,7 @@ const CardContainer = styled.div`
     @media (max-width: 768px) {
         background: none;
         margin: 0 auto;
+        padding-top: 22px;
 `;
 
 const Home = () => {

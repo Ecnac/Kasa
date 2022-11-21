@@ -27,6 +27,9 @@ const AboutContent = [
 
 const AboutContainer = styled.div`
     padding-top: 40px;
+
+    @media (max-width: 768px) {
+        padding-top: 16px;
 `;
 
 const CollapseContainer = styled.div`

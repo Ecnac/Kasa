@@ -7,6 +7,11 @@ import Tags from '../../components/Tags';
 import Collapse from '../../components/Collapse';
 import Rating from '../../components/Rating';
 
+const LodgingContainer = styled.div`
+    width: 100%;
+    margin: 0 auto;
+`;
+
 const HeadInfos = styled.div`
     width: 90%;
     display: flex;
@@ -30,6 +35,7 @@ const LodgementInfos = styled.div`
 
 const Title = styled.h1`
     font-size: 36px;
+    font-weight: 500;
     color: ${colors.primary};
 
     @media (max-width: 768px) {
@@ -43,12 +49,16 @@ const Location = styled.p`
 
     @media (max-width: 768px) {
         font-size: 14px;
+        margin-top: -5px;
 `;
 
 const TagsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin-top: -10px;
+
+    @media (max-width: 768px) {
+        margin-top: 0;
 `;
 
 const HostAndRating = styled.div`
@@ -151,7 +161,7 @@ const Lodging = () => {
         return;
     }
     return (
-        <div>
+        <LodgingContainer>
             <Carousel images={lodgement.pictures} />
             <HeadInfos>
                 <LodgementInfos>
@@ -186,7 +196,7 @@ const Lodging = () => {
                     ))}
                 </Collapse>
             </CollapseContainer>
-        </div>
+        </LodgingContainer>
     );
 };
 
