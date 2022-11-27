@@ -56,9 +56,10 @@ const TextContainer = styled.div`
         width: 100%;
 `;
 
-const Text = styled.p`
+const Text = styled.ul`
 font-size: 18px;
 margin-left: 10px;
+padding-left: 0;
 color: ${colors.primary};}
 
     @media (max-width: 768px) {

@@ -26,6 +26,7 @@ const AboutContent = [
 ];
 
 const AboutContainer = styled.div`
+    min-height: calc(100vh - 209px);
     padding-top: 40px;
 
     @media (max-width: 768px) {

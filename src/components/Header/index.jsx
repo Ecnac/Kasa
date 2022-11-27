@@ -1,6 +1,6 @@
 import logo from '../../assets/logo.png';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import colors from '../../utils/Style/color';
 
 const HeaderContainer = styled.header`
@@ -62,7 +62,7 @@ const ListItem = styled.li`
         text-transform: uppercase;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
     margin: 0 0 0 57px;
     font-size: 24px;
     font-weight: 500;
@@ -70,13 +70,21 @@ const StyledLink = styled(Link)`
     cursor: pointer;
     text-decoration: none;
     list-style: none;
-    &:hover {
-        text-decoration: underline;
+
+    &.active {
+        text-decoration: underline;        
     }
 
     @media (max-width: 768px) {
         font-size: 12px;
         margin: 0 0 0 10px;
+
+        &.active {
+            text-decoration: underline;
+            font-size: 12px;
+            margin: 0 0 0 10px;
+
+        
 `;
 
 const Header = () => (
